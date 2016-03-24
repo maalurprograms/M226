@@ -1,6 +1,6 @@
 package Grafikeditor;
 
-import java.awt.Color;
+import java.awt.*;
 
 public class Rectangle extends Figure{
 	private int width, heigth;
@@ -17,5 +17,10 @@ public class Rectangle extends Figure{
 	
 	public int getWidth(){
 		return width;
+	}
+
+	@Override
+	public void zeichen(Graphics2D g2d) {
+		g2d.fillRect(x, y, width, heigth);
 	}
 }

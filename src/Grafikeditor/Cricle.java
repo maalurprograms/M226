@@ -1,6 +1,6 @@
 package Grafikeditor;
 
-import java.awt.Color;
+import java.awt.*;
 
 public class Cricle extends Figure{
 	private int radius;
@@ -12,5 +12,10 @@ public class Cricle extends Figure{
 	
 	public int getRadius() {
 		return radius;
+	}
+
+	@Override
+	public void zeichen(Graphics2D g2d) {
+		g2d.fillOval(x - radius, y - radius, radius, radius);
 	}
 }

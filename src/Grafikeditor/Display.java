@@ -72,38 +72,39 @@ public class Display extends JFrame {
 		Graphics2D g2d = (Graphics2D)g;
 		
 		for (Figure figure : figures) {
+			figure.zeichen(g2d);
 			
-			if (figure instanceof Group) {
-				Group group = (Group) figure;
-				for (Figure partOfGroup : group.getParts()) {
-					figures.add(partOfGroup);
-				}
-				figures.remove(group);
-			} else {
-
-				g2d.setColor(figure.getColor());
-				g2d.setStroke(new BasicStroke(figure.getStrokeWidth()));
-
-				if (figure instanceof Rectangle) {
-
-					Rectangle r = (Rectangle) figure;
-					g2d.fillRect(r.getX(), r.getY(), r.getWidth(), r.getHeigth());
-
-				} else if (figure instanceof Cricle) {
-
-					Cricle k = (Cricle) figure;
-					g2d.fillOval(k.getX() - k.getRadius(), k.getY() - k.getRadius(), k.getRadius(), k.getRadius());
-
-				} else if (figure instanceof Line) {
-
-					Line l = (Line) figure;
-					g2d.drawLine(l.getX(), l.getY(), l.getXEnd(), l.getYEnd());
-
-				} else if (figure instanceof Text) {
-					Text t = (Text) figure;
-					g2d.drawString(t.getText(), t.getX(), t.getY());
-				}
-			}
+//			if (figure instanceof Group) {
+//				Group group = (Group) figure;
+//				for (Figure partOfGroup : group.getParts()) {
+//					figures.add(partOfGroup);
+//				}
+//				figures.remove(group);
+//			} else {
+//
+//				g2d.setColor(figure.getColor());
+//				g2d.setStroke(new BasicStroke(figure.getStrokeWidth()));
+//
+//				if (figure instanceof Rectangle) {
+//
+//					Rectangle r = (Rectangle) figure;
+//					g2d.fillRect(r.getX(), r.getY(), r.getWidth(), r.getHeigth());
+//
+//				} else if (figure instanceof Cricle) {
+//
+//					Cricle k = (Cricle) figure;
+//					g2d.fillOval(k.getX() - k.getRadius(), k.getY() - k.getRadius(), k.getRadius(), k.getRadius());
+//
+//				} else if (figure instanceof Line) {
+//
+//					Line l = (Line) figure;
+//					g2d.drawLine(l.getX(), l.getY(), l.getXEnd(), l.getYEnd());
+//
+//				} else if (figure instanceof Text) {
+//					Text t = (Text) figure;
+//					g2d.drawString(t.getText(), t.getX(), t.getY());
+//				}
+//			}
 			
 		}
 	}

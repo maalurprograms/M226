@@ -1,6 +1,6 @@
 package Grafikeditor;
 
-import java.awt.Color;
+import java.awt.*;
 
 public class Line extends Figure{
 	private int xEnd, yEnd;
@@ -24,5 +24,10 @@ public class Line extends Figure{
 		super.move(deltaX, deltaY);
 		this.xEnd += deltaX;
 		yEnd += deltaY;
+	}
+
+	@Override
+	public void zeichen(Graphics2D g2d) {
+		g2d.drawLine(x, y, xEnd, yEnd);
 	}
 }

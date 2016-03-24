@@ -1,6 +1,6 @@
 package Grafikeditor;
 
-import java.awt.Color;
+import java.awt.*;
 
 public class Text extends Figure{
 	private String text;
@@ -12,5 +12,10 @@ public class Text extends Figure{
 	
 	public String getText(){
 		return text;
+	}
+
+	@Override
+	public void zeichen(Graphics2D g2d) {
+		g2d.drawString(text, x, y);
 	}
 }

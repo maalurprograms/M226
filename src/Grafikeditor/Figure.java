@@ -1,8 +1,8 @@
 package Grafikeditor;
 
-import java.awt.Color;
+import java.awt.*;
 
-public class Figure {
+public abstract class Figure {
 	protected int x,y;
 	protected Color color;
 	protected float strokeWidth;
@@ -35,5 +35,7 @@ public class Figure {
 		this.x+=deltaX;
 		this.y+=deltaY;
 	}
+
+	public abstract void zeichen(Graphics2D g2d);
 
 }
