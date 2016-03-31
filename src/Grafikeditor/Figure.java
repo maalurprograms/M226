@@ -36,6 +36,6 @@ public abstract class Figure {
 		this.y+=deltaY;
 	}
 
-	public abstract void zeichen(Graphics2D g2d);
+	public abstract void draw(Graphics2D g2d);
 
 }

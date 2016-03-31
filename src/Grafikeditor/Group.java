@@ -23,9 +23,9 @@ public class Group extends Figure{
 	}
 
 	@Override
-	public void zeichen(Graphics2D g2d) {
+	public void draw(Graphics2D g2d) {
 		for (Figure figure:parts) {
-			figure.zeichen(g2d);
+			figure.draw(g2d);
 		}
 	}
 }

@@ -27,7 +27,7 @@ public class Line extends Figure{
 	}
 
 	@Override
-	public void zeichen(Graphics2D g2d) {
+	public void draw(Graphics2D g2d) {
 		g2d.drawLine(x, y, xEnd, yEnd);
 	}
 }

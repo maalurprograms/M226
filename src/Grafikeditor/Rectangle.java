@@ -14,13 +14,13 @@ public class Rectangle extends Figure{
 	public int getHeigth(){
 		return heigth;
 	}
-	
+
 	public int getWidth(){
 		return width;
 	}
 
 	@Override
-	public void zeichen(Graphics2D g2d) {
+	public void draw(Graphics2D g2d) {
 		g2d.fillRect(x, y, width, heigth);
 	}
 }

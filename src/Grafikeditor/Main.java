@@ -10,13 +10,13 @@ public class Main {
 		int y = 100;
 		Group house = new Group(x, y, Color.RED, 10, new Figure[] {
 				new Text(x + 350, y + 100, Color.BLUE, 10, "Group Element"),
-				new Rectangle(x + 300, y + 200, Color.LIGHT_GRAY, 10, x + 200, y + 200),
-				new Cricle(x + 420, y + 280, Color.BLACK, 10, 50),
-				new Line(x + 500, y + 200, Color.YELLOW, 10, x + 550, y + 250),
-				new Line(x + 500, y + 200, Color.RED, 10, x + 400, y + 150),
-				new Line(x + 400, y + 150, Color.GREEN, 10, x + 300, y + 200),
-				new Line(x + 300, y + 200, Color.GRAY, 10, x + 250, y + 250),
-				new Rectangle(300, y + 300, Color.ORANGE, 10, x + 50, y + 100)
+//				new Rectangle(x + 300, y + 200, Color.LIGHT_GRAY, 10, x + 200, y + 200),
+//				new Cricle(x + 420, y + 280, Color.BLACK, 10, 50),
+//				new Line(x + 500, y + 200, Color.YELLOW, 10, x + 550, y + 250),
+//				new Line(x + 500, y + 200, Color.RED, 10, x + 400, y + 150),
+//				new Line(x + 400, y + 150, Color.GREEN, 10, x + 300, y + 200),
+//				new Line(x + 300, y + 200, Color.GRAY, 10, x + 250, y + 250),
+//				new Rectangle(300, y + 300, Color.ORANGE, 10, x + 50, y + 100)
 		});
 		display.addFigure(house);
 

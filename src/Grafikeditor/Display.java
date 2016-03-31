@@ -1,6 +1,5 @@
 package Grafikeditor;
 
-import java.awt.BasicStroke;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -72,7 +71,7 @@ public class Display extends JFrame {
 		Graphics2D g2d = (Graphics2D)g;
 		
 		for (Figure figure : figures) {
-			figure.zeichen(g2d);
+			figure.draw(g2d);
 			
 //			if (figure instanceof Group) {
 //				Group group = (Group) figure;
