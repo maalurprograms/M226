@@ -9,10 +9,6 @@ public class Group extends Figure{
 		super(x, y,color, strokeWidth);
 		this.parts = parts;
 	}
-	
-	public Figure[] getParts(){
-		return parts;
-	}
 
 	@Override
 	public void move(int deltaX, int deltaY) {

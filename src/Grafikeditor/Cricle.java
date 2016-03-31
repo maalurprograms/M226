@@ -9,10 +9,6 @@ public class Cricle extends Figure{
 		super(x, y,color, strokeWidth);
 		this.radius = radius;
 	}
-	
-	public int getRadius() {
-		return radius;
-	}
 
 	@Override
 	public void draw(Graphics2D g2d) {

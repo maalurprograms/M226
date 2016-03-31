@@ -9,10 +9,6 @@ public class Text extends Figure{
 		super(x, y,color, strokeWidth);
 		this.text = text;
 	}
-	
-	public String getText(){
-		return text;
-	}
 
 	@Override
 	public void draw(Graphics2D g2d) {

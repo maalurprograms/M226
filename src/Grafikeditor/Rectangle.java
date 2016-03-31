@@ -10,14 +10,6 @@ public class Rectangle extends Figure{
 		this.width = width;
 		this.heigth = heigth;
 	}
-	
-	public int getHeigth(){
-		return heigth;
-	}
-
-	public int getWidth(){
-		return width;
-	}
 
 	@Override
 	public void draw(Graphics2D g2d) {

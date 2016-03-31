@@ -14,22 +14,6 @@ public abstract class Figure {
 		this.color = color;
 		this.strokeWidth = strokeWidth;
 	}
-	
-	public int getX(){
-		return x;
-	}
-	
-	public int getY(){
-		return y;
-	}
-	
-	public Color getColor(){
-		return color;
-	}
-	
-	public float getStrokeWidth(){
-		return strokeWidth;
-	}
 
 	public void move(int deltaX, int deltaY){
 		this.x+=deltaX;
