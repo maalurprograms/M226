@@ -2,17 +2,17 @@ package Grafikeditor;
 
 import java.awt.*;
 
-public abstract class Figure {
-	protected int x,y;
-	protected Color color;
-	protected float strokeWidth;
+abstract class Figure {
+	int x,y;
+//	protected Color color;
+//	protected float strokeWidth;
 	
 	
-	public Figure(int x, int y){// Color color, float strokeWidth) {
+	Figure(int x, int y){// Color color, float strokeWidth) {
 		this.x = x;
 		this.y = y;
-		this.color = color;
-		this.strokeWidth = strokeWidth;
+//		this.color = color;
+//		this.strokeWidth = strokeWidth;
 	}
 
 	public void move(int deltaX, int deltaY){

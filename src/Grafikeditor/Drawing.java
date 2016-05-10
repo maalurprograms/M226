@@ -4,18 +4,15 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by jonas on 09.05.16.
- */
-public class Drawing {
+class Drawing {
 
     private List<Figure> figures = new ArrayList<>();
 
-    public void addFigure(Figure figure) {
+    void addFigure(Figure figure) {
         figures.add(figure);
     }
 
-    public void drawFigure(Graphics g) {
+    void drawFigure(Graphics g) {
 
         Graphics2D g2d = (Graphics2D)g;
 

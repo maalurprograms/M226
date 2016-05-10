@@ -2,10 +2,10 @@ package Grafikeditor;
 
 import java.awt.*;
 
-public class CircleFigure extends Figure{
+class CircleFigure extends Figure{
 	private int radius;
 	
-	public CircleFigure(int x, int y, int radius){//, Color color, float strokeWidth) {
+	CircleFigure(int x, int y, int radius){//, Color color, float strokeWidth) {
 		super(x, y);//,color, strokeWidth);
 		this.radius = radius;
 	}

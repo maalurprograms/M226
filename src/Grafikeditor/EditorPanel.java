@@ -1,6 +1,6 @@
 package Grafikeditor;
 
-import java.awt.Graphics;
+import java.awt.*;
 
 import javax.swing.JPanel;
 

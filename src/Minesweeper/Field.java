@@ -37,7 +37,7 @@ public class Field {
 	 */
 	public Field() {
 		frame.setSize(500,500);
-		frame.setLayout(new GridLayout(8,8));;
+		frame.setLayout(new GridLayout(8,8));
 		
 		generateBombs(this.bombs);
 		generateCells(this.cells, this.bombs, frame);

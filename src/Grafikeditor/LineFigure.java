@@ -2,22 +2,22 @@ package Grafikeditor;
 
 import java.awt.*;
 
-public class LineFigure extends Figure{
+class LineFigure extends Figure{
 	private int xEnd, yEnd;
 	
-	public LineFigure(int x, int y, int xEnd, int yEnd){//, Color color, float strokeWidth) {
+	LineFigure(int x, int y, int xEnd, int yEnd){//, Color color, float strokeWidth) {
 		super(x, y);//,color, strokeWidth);
 		this.xEnd = xEnd;
 		this.yEnd = yEnd;
 	}
 	
-	public int getXEnd(){
-		return xEnd;
-	}
-	
-	public int getYEnd(){
-		return yEnd;
-	}
+//	public int getXEnd(){
+//		return xEnd;
+//	}
+//
+//	public int getYEnd(){
+//		return yEnd;
+//	}
 
 	@Override
 	public void move(int deltaX, int deltaY) {
