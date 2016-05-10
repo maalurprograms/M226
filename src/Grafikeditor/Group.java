@@ -5,8 +5,8 @@ import java.awt.*;
 public class Group extends Figure{
 	private Figure[] parts;
 	
-	public Group(int x, int y, Color color, float strokeWidth, Figure[] parts) {
-		super(x, y,color, strokeWidth);
+	public Group(int x, int y, Figure[] parts){//, Color color, float strokeWidth) {
+		super(x, y);//,color, strokeWidth);
 		this.parts = parts;
 	}
 

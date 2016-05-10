@@ -8,7 +8,7 @@ public abstract class Figure {
 	protected float strokeWidth;
 	
 	
-	public Figure(int x, int y, Color color, float strokeWidth) {
+	public Figure(int x, int y){// Color color, float strokeWidth) {
 		this.x = x;
 		this.y = y;
 		this.color = color;
