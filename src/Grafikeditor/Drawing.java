@@ -18,7 +18,12 @@ class Drawing {
 
         for (Figure figure : figures) {
             figure.draw(g2d);
+
         }
+    }
+
+    public void deleteAll() {
+        figures.clear();
     }
 
 //    public Drawing(List<Figure> figures) {
@@ -34,7 +39,4 @@ class Drawing {
 //        }
 //    }
 //
-//    public void deleteAll() {
-//        figures.clear();
-//    }
 }

@@ -11,6 +11,7 @@ final class EditorFrame extends JFrame {
     private EditorControl editorControl = new EditorControl();
     private JLabel position = new JLabel("  Position: X: Y:");
     private JLabel action = new JLabel("Action: Nothing");
+    private boolean mousePressed = false;
 
     EditorFrame(int breite, int hoehe) {
         erzeugeUndSetzeEditorPanel();
@@ -65,7 +66,7 @@ final class EditorFrame extends JFrame {
         jMenuBar.add(new JLabel("  "));
         add(jMenuBar);
 
-        this.addMouseMotionListener(new MouseMotionAdapter() {
+        addMouseMotionListener(new MouseMotionAdapter() {
             @Override
             public void mouseMoved(MouseEvent e) {
                 super.mouseMoved(e);
@@ -80,25 +81,37 @@ final class EditorFrame extends JFrame {
             @Override
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
-                editorControl.setErsterPunkt(e.getPoint());
+                editorControl.setP1(e.getPoint());
+                mousePressed = true;
             }
 
             @Override
             public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);
+                mousePressed = false;
                 editorControl.erzeugeFigurMitZweitemPunkt(e.getPoint());
                 repaint();
             }
         });
+
         addKeyListener(new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
                 super.keyTyped(e);
-                if (e.getKeyChar() == 'r' || e.getKeyChar() == 'l' || e.getKeyChar() == 'c'){
+                if (e.getKeyChar() == 'r'){
+                    action.setText("Action Rectangle");
+                } else if (e.getKeyChar() == 'l'){
+                    action.setText("Action Line");
+                } else if (e.getKeyChar() == 'c'){
+                    action.setText("Action Circle");
+                } else if (e.getKeyChar() == 'n'){
                     editorControl.setFigurTyp(e.getKeyChar());
+                    repaint();
                 }
+                editorControl.setFigurTyp(e.getKeyChar());
             }
         });
+        setFocusable(true);
     }
 
     private void erzeugeUndSetzeEditorPanel() {
