@@ -50,15 +50,21 @@ final class EditorFrame extends JFrame {
             });
             jMenuItem.addActionListener(e -> {
                 setCursor(new Cursor(Cursor.CROSSHAIR_CURSOR));
-                if (jMenuItem.getText().equals("Rectangle")){
-                    editorControl.setFigurTyp('r');
-                    action.setText("Action: Rectangle");
-                }  else if (jMenuItem.getText().equals("Line")) {
-                    editorControl.setFigurTyp('l');
-                    action.setText("Action: Line");
-                } else if (jMenuItem.getText().equals("Circle")) {
-                    editorControl.setFigurTyp('c');
-                    action.setText("Action: Circle");
+                switch (jMenuItem.getText()){
+                    case "Rectangle":
+                        editorControl.setFigurTyp('r');
+                        action.setText("Action: Rectangle");
+                        break;
+
+                    case "Line":
+                        editorControl.setFigurTyp('l');
+                        action.setText("Action: Line");
+                        break;
+
+                    case "Circle":
+                        editorControl.setFigurTyp('c');
+                        action.setText("Action: Circle");
+                        break;
                 }
             });
             jMenu.add(jMenuItem);
@@ -112,15 +118,24 @@ final class EditorFrame extends JFrame {
             public void keyTyped(KeyEvent e) {
                 super.keyTyped(e);
                 setCursor(new Cursor(Cursor.CROSSHAIR_CURSOR));
-                if (e.getKeyChar() == 'r'){
-                    action.setText("Action Rectangle");
-                } else if (e.getKeyChar() == 'l'){
-                    action.setText("Action Line");
-                } else if (e.getKeyChar() == 'c'){
-                    action.setText("Action Circle");
-                } else if (e.getKeyChar() == 'n'){
-                    editorControl.clearFrame();
-                    repaint();
+
+                switch (e.getKeyChar()){
+                    case 'r':
+                        action.setText("Action: Rectangle");
+                        break;
+
+                    case 'l':
+                        action.setText("Action: Line");
+                        break;
+
+                    case 'c':
+                        action.setText("Action: Circle");
+                        break;
+
+                    case 'n':
+                        editorControl.clearFrame();
+                        repaint();
+                        break;
                 }
                 editorControl.setFigurTyp(e.getKeyChar());
             }
