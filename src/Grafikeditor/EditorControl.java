@@ -48,8 +48,10 @@ final class EditorControl {
             } else {
                 zeichnung.addFigure(new RectangleFigure(p1.x, p1.y, xSize, ySize));
             }
-        } else if (figurTyp == 'n'){
-            zeichnung.deleteAll();
         }
+    }
+
+    void clearFrame(){
+        zeichnung.deleteAll();
     }
 }

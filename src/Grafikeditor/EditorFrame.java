@@ -9,61 +9,73 @@ import javax.swing.*;
 final class EditorFrame extends JFrame {
 
     private EditorControl editorControl = new EditorControl();
-    private JLabel position = new JLabel("  Position: X: Y:");
+    private JLabel position = new JLabel("Position: X: Y:");
     private JLabel action = new JLabel("Action: Nothing");
-    private boolean mousePressed = false;
+//    TODO    Add Rubberbanding effect:
+//    private boolean mousePressed = false;
 
     EditorFrame(int breite, int hoehe) {
         erzeugeUndSetzeEditorPanel();
         fensterEinmitten(breite, hoehe);
+        setMinimumSize(new Dimension(800, 600));
 
         JMenuBar jMenuBar = new JMenuBar();
         jMenuBar.setPreferredSize(new Dimension(800, 20));
         jMenuBar.setBackground(Color.WHITE);
 
-        JButton[] menuItems = new JButton[3];
+        JMenu jMenu = new JMenu("Menu");
 
-        menuItems[0] = new JButton("Rectangle");
-        menuItems[1] = new JButton("Line");
-        menuItems[2] = new JButton("Circle");
+        JMenuItem[] menuItems = new JMenuItem[3];
 
-        for (JButton jButton:menuItems) {
-            jButton.setBackground(Color.WHITE);
-            jButton.setBorderPainted(false);
-            jButton.setFocusPainted(false);
-            jButton.addMouseListener(new MouseAdapter() {
+        menuItems[0] = new JMenuItem("Rectangle");
+        menuItems[1] = new JMenuItem("Line");
+        menuItems[2] = new JMenuItem("Circle");
+
+        for (JMenuItem jMenuItem:menuItems) {
+            jMenuItem.setBackground(Color.WHITE);
+            jMenuItem.setBorderPainted(false);
+            jMenuItem.setFocusPainted(false);
+            jMenuItem.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseEntered(MouseEvent e) {
                     super.mouseEntered(e);
-                    jButton.setBackground(Color.LIGHT_GRAY);
+                    jMenuItem.setBackground(Color.LIGHT_GRAY);
                 }
 
                 @Override
                 public void mouseExited(MouseEvent e) {
                     super.mouseExited(e);
-                    jButton.setBackground(Color.WHITE);
+                    jMenuItem.setBackground(Color.WHITE);
                 }
             });
-            jButton.addActionListener(e -> {
-                if (jButton.getText().equals("Rectangle")){
+            jMenuItem.addActionListener(e -> {
+                if (jMenuItem.getText().equals("Rectangle")){
                     editorControl.setFigurTyp('r');
                     action.setText("Action: Rectangle");
-                }  else if (jButton.getText().equals("Line")) {
+                }  else if (jMenuItem.getText().equals("Line")) {
                     editorControl.setFigurTyp('l');
                     action.setText("Action: Line");
-                } else if (jButton.getText().equals("Circle")) {
+                } else if (jMenuItem.getText().equals("Circle")) {
                     editorControl.setFigurTyp('c');
                     action.setText("Action: Circle");
                 }
             });
-            jMenuBar.add(jButton);
+            jMenu.add(jMenuItem);
         }
 
-        jMenuBar.add(new JLabel("                           "));
+        JMenuItem clear = new JMenuItem("Clear");
+        clear.addActionListener(e -> {
+            editorControl.clearFrame();
+            repaint();
+        });
+        jMenu.add(clear);
+
+        jMenuBar.add(jMenu);
+        jMenuBar.add(new JLabel("   "));
         jMenuBar.add(action);
         jMenuBar.add(Box.createHorizontalGlue());
         jMenuBar.add(position);
-        jMenuBar.add(new JLabel("  "));
+        jMenuBar.add(new JLabel("   "));
         add(jMenuBar);
 
         addMouseMotionListener(new MouseMotionAdapter() {
@@ -82,13 +94,13 @@ final class EditorFrame extends JFrame {
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
                 editorControl.setP1(e.getPoint());
-                mousePressed = true;
+//                mousePressed = true;
             }
 
             @Override
             public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);
-                mousePressed = false;
+//                mousePressed = false;
                 editorControl.erzeugeFigurMitZweitemPunkt(e.getPoint());
                 repaint();
             }
@@ -105,7 +117,7 @@ final class EditorFrame extends JFrame {
                 } else if (e.getKeyChar() == 'c'){
                     action.setText("Action Circle");
                 } else if (e.getKeyChar() == 'n'){
-                    editorControl.setFigurTyp(e.getKeyChar());
+                    editorControl.clearFrame();
                     repaint();
                 }
                 editorControl.setFigurTyp(e.getKeyChar());
