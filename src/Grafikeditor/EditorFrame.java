@@ -49,6 +49,7 @@ final class EditorFrame extends JFrame {
                 }
             });
             jMenuItem.addActionListener(e -> {
+                setCursor(new Cursor(Cursor.CROSSHAIR_CURSOR));
                 if (jMenuItem.getText().equals("Rectangle")){
                     editorControl.setFigurTyp('r');
                     action.setText("Action: Rectangle");
@@ -110,6 +111,7 @@ final class EditorFrame extends JFrame {
             @Override
             public void keyTyped(KeyEvent e) {
                 super.keyTyped(e);
+                setCursor(new Cursor(Cursor.CROSSHAIR_CURSOR));
                 if (e.getKeyChar() == 'r'){
                     action.setText("Action Rectangle");
                 } else if (e.getKeyChar() == 'l'){
