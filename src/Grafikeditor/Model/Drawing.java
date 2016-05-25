@@ -1,18 +1,17 @@
-package Grafikeditor;
+package Grafikeditor.Model;
 
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.List;
 
-class Drawing {
+public class Drawing {
 
-    private List<Figure> figures = new ArrayList<>();
+    private ArrayList<Figure> figures = new ArrayList<>();
 
-    void addFigure(Figure figure) {
+    public void addFigure(Figure figure) {
         figures.add(figure);
     }
 
-    void drawFigure(Graphics g) {
+    public void drawFigure(Graphics g) {
 
         Graphics2D g2d = (Graphics2D)g;
 

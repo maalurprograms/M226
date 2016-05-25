@@ -1,11 +1,11 @@
-package Grafikeditor;
+package Grafikeditor.Model;
 
 import java.awt.*;
 
-class RectangleFigure extends Figure{
+public class RectangleFigure extends Figure {
 	private int width, heigth;
 	
-	RectangleFigure(int x, int y, int width, int heigth){//, Color color, float strokeWidth) {
+	public RectangleFigure(int x, int y, int width, int heigth){//, Color color, float strokeWidth) {
 		super(x, y);//,color, strokeWidth);
 		this.width = width;
 		this.heigth = heigth;

@@ -1,14 +1,14 @@
-package Grafikeditor;
+package Grafikeditor.Model;
 
 import java.awt.*;
 
-abstract class Figure {
+public abstract class Figure {
 	int x,y;
 //	protected Color color;
 //	protected float strokeWidth;
-	
-	
-	Figure(int x, int y){// Color color, float strokeWidth) {
+
+
+	public Figure(int x, int y){// Color color, float strokeWidth) {
 		this.x = x;
 		this.y = y;
 //		this.color = color;

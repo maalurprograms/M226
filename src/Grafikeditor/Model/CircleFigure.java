@@ -1,11 +1,11 @@
-package Grafikeditor;
+package Grafikeditor.Model;
 
 import java.awt.*;
 
-class CircleFigure extends Figure{
+public class CircleFigure extends Figure {
 	private int radius;
-	
-	CircleFigure(int x, int y, int radius){//, Color color, float strokeWidth) {
+
+	public CircleFigure(int x, int y, int radius){//, Color color, float strokeWidth) {
 		super(x, y);//,color, strokeWidth);
 		this.radius = radius;
 	}

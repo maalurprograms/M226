@@ -1,12 +1,13 @@
-package Grafikeditor;
+package Grafikeditor.View;
 
-import java.awt.*;
-import java.awt.Rectangle;
-import java.awt.event.*;
+import Grafikeditor.Control.EditorControl;
+
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 
 @SuppressWarnings("serial")
-final class EditorFrame extends JFrame {
+public final class EditorFrame extends JFrame {
 
     private EditorControl editorControl = new EditorControl();
     private JLabel position = new JLabel("Position: X: Y:");
@@ -14,7 +15,7 @@ final class EditorFrame extends JFrame {
 //    TODO    Add Rubberbanding effect:
 //    private boolean mousePressed = false;
 
-    EditorFrame(int breite, int hoehe) {
+    public EditorFrame(int breite, int hoehe) {
         erzeugeUndSetzeEditorPanel();
         fensterEinmitten(breite, hoehe);
         setMinimumSize(new Dimension(800, 600));

@@ -1,27 +1,31 @@
-package Grafikeditor;
+package Grafikeditor.Control;
 
-import java.awt.Graphics;
-import java.awt.Point;
+import Grafikeditor.Model.CircleFigure;
+import Grafikeditor.Model.Drawing;
+import Grafikeditor.Model.LineFigure;
+import Grafikeditor.Model.RectangleFigure;
 
-final class EditorControl {
+import java.awt.*;
+
+public final class EditorControl {
     private Drawing zeichnung = new Drawing();
     private char figurTyp;
     private Point p1;
 
-    void allesNeuZeichnen(Graphics g) {
+    public void allesNeuZeichnen(Graphics g) {
         //TODO: Ergänzen
         zeichnung.drawFigure(g);
     }
 
-    void setFigurTyp(char figurTyp) {
+    public void setFigurTyp(char figurTyp) {
         this.figurTyp = figurTyp;
     }
 
-    void setP1(Point p1) {
+    public void setP1(Point p1) {
         this.p1 = p1;
     }
 
-    void erzeugeFigurMitZweitemPunkt(Point p2) {
+    public void erzeugeFigurMitZweitemPunkt(Point p2) {
 
         int xSize = p2.x - p1.x;
         int ySize = p2.y - p1.y;
@@ -51,7 +55,7 @@ final class EditorControl {
         }
     }
 
-    void clearFrame(){
+    public void clearFrame(){
         zeichnung.deleteAll();
     }
 }

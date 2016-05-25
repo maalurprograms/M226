@@ -1,11 +1,11 @@
-package Grafikeditor;
+package Grafikeditor.Model;
 
 import java.awt.*;
 
-class LineFigure extends Figure{
+public class LineFigure extends Figure {
 	private int xEnd, yEnd;
-	
-	LineFigure(int x, int y, int xEnd, int yEnd){//, Color color, float strokeWidth) {
+
+	public LineFigure(int x, int y, int xEnd, int yEnd){//, Color color, float strokeWidth) {
 		super(x, y);//,color, strokeWidth);
 		this.xEnd = xEnd;
 		this.yEnd = yEnd;

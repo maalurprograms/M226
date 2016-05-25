@@ -1,11 +1,12 @@
-package Grafikeditor;
+package Grafikeditor.View;
 
+import Grafikeditor.Control.EditorControl;
+
+import javax.swing.*;
 import java.awt.*;
 
-import javax.swing.JPanel;
-
 @SuppressWarnings("serial")
-final class EditorPanel extends JPanel {
+public  final class EditorPanel extends JPanel {
     private EditorControl editorControl;
 
     EditorPanel(EditorControl control) {

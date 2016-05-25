@@ -1,4 +1,6 @@
-package Grafikeditor;
+package Grafikeditor.Control;
+
+import Grafikeditor.View.EditorFrame;
 
 public final class Grafikeditor {
 
