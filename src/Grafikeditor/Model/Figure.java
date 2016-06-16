@@ -22,4 +22,9 @@ public abstract class Figure {
 
 	public abstract void draw(Graphics2D g2d);
 
+	@Override
+	public String toString() {
+		super.toString();
+		return this.getClass().toString()+" "+x+" "+y;
+	}
 }

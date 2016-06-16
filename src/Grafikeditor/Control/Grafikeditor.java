@@ -1,6 +1,10 @@
 package Grafikeditor.Control;
 
-import Grafikeditor.View.EditorFrame;
+import Grafikeditor.Model.Figure;
+import Grafikeditor.Test.FigurFileDAO;
+import Grafikeditor.Test.FigurParser;
+
+import java.util.List;
 
 public final class Grafikeditor {
 
@@ -10,6 +14,13 @@ public final class Grafikeditor {
 
     private Grafikeditor() {
         @SuppressWarnings("unused")
-        EditorFrame frame = new EditorFrame(800, 600);
+        FigurFileDAO figurFileDAO = new FigurFileDAO();
+        FigurParser figurParser = new FigurParser(figurFileDAO);
+        List<Figure> figuren = figurParser.parse();
+        for (Figure figure:figuren) {
+            System.out.println(figure.toString());
+        }
+        figurFileDAO.close();
+//        EditorFrame frame = new EditorFrame(800, 600);
     }
 }
