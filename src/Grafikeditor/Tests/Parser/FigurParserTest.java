@@ -1,4 +1,4 @@
-package Grafikeditor.Tests;
+package Grafikeditor.Tests.Parser;
 
 import Grafikeditor.Model.Figure;
 import Grafikeditor.Parser.FigurParser;

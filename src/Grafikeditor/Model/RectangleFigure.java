@@ -12,7 +12,7 @@ public class RectangleFigure extends Figure {
 	}
 
 	@Override
-	public void draw(Graphics2D g2d) {
-		g2d.drawRect(x, (y-25), width, heigth);
+	public void draw(Graphics g) {
+		g.drawRect(x, y, width, heigth);
 	}
 }

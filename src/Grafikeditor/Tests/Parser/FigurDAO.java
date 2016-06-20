@@ -1,4 +1,4 @@
-package Grafikeditor.Tests;
+package Grafikeditor.Tests.Parser;
 
 /**
  * Created by jonas on 16.06.16.

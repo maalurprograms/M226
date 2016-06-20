@@ -27,7 +27,7 @@ public class LineFigure extends Figure {
 	}
 
 	@Override
-	public void draw(Graphics2D g2d) {
-		g2d.drawLine(x, (y-25), xEnd, (yEnd-25));
+	public void draw(Graphics g) {
+		g.drawLine(x, (y-25), xEnd, (yEnd-25));
 	}
 }

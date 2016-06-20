@@ -13,10 +13,8 @@ public class Drawing {
 
     public void drawFigure(Graphics g) {
 
-        Graphics2D g2d = (Graphics2D)g;
-
         for (Figure figure : figures) {
-            figure.draw(g2d);
+            figure.draw(g);
 
         }
     }

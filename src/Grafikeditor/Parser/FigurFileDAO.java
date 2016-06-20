@@ -1,6 +1,6 @@
 package Grafikeditor.Parser;
 
-import Grafikeditor.Tests.FigurDAO;
+import Grafikeditor.Tests.Parser.FigurDAO;
 
 import java.io.BufferedReader;
 import java.io.File;

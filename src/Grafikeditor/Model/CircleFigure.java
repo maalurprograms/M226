@@ -11,8 +11,8 @@ public class CircleFigure extends Figure {
 	}
 
 	@Override
-	public void draw(Graphics2D g2d) {
-		g2d.drawOval(x - radius, (y-25) - radius, radius*2, radius*2);
+	public void draw(Graphics g) {
+		g.drawOval(x - radius, (y-25) - radius, radius*2, radius*2);
 
 	}
 }

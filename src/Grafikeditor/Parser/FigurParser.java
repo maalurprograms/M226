@@ -4,7 +4,7 @@ import Grafikeditor.Model.CircleFigure;
 import Grafikeditor.Model.Figure;
 import Grafikeditor.Model.LineFigure;
 import Grafikeditor.Model.RectangleFigure;
-import Grafikeditor.Tests.FigurDAO;
+import Grafikeditor.Tests.Parser.FigurDAO;
 
 import java.util.ArrayList;
 import java.util.List;
