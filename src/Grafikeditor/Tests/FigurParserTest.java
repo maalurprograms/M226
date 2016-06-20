@@ -1,6 +1,7 @@
-package Grafikeditor.Test;
+package Grafikeditor.Tests;
 
 import Grafikeditor.Model.Figure;
+import Grafikeditor.Parser.FigurParser;
 
 import java.util.List;
 

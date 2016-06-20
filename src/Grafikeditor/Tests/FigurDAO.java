@@ -1,6 +1,4 @@
-package Grafikeditor.Test;
-
-import Grafikeditor.Control.Grafikeditor;
+package Grafikeditor.Tests;
 
 /**
  * Created by jonas on 16.06.16.

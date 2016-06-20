@@ -1,8 +1,8 @@
 package Grafikeditor.Control;
 
 import Grafikeditor.Model.Figure;
-import Grafikeditor.Test.FigurFileDAO;
-import Grafikeditor.Test.FigurParser;
+import Grafikeditor.Parser.FigurFileDAO;
+import Grafikeditor.Parser.FigurParser;
 
 import java.util.List;
 

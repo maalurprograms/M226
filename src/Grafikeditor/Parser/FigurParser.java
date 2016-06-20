@@ -1,9 +1,10 @@
-package Grafikeditor.Test;
+package Grafikeditor.Parser;
 
 import Grafikeditor.Model.CircleFigure;
 import Grafikeditor.Model.Figure;
 import Grafikeditor.Model.LineFigure;
 import Grafikeditor.Model.RectangleFigure;
+import Grafikeditor.Tests.FigurDAO;
 
 import java.util.ArrayList;
 import java.util.List;

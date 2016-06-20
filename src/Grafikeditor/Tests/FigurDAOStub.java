@@ -1,4 +1,4 @@
-package Grafikeditor.Test;
+package Grafikeditor.Tests;
 
 /**
  * Created by jonas on 16.06.16.
