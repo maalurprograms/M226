@@ -1,4 +1,4 @@
-package Grafikeditor.Tests.Rectangle;
+package Grafikeditor.Tests.CircleStub;
 
 import java.awt.*;
 import java.awt.image.ImageObserver;

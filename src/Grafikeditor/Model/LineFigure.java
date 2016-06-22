@@ -28,6 +28,6 @@ public class LineFigure extends Figure {
 
 	@Override
 	public void draw(Graphics g) {
-		g.drawLine(x, (y-25), xEnd, (yEnd-25));
+		g.drawLine(x, y, xEnd, yEnd);
 	}
 }

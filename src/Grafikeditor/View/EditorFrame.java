@@ -28,7 +28,7 @@ public final class EditorFrame extends JFrame {
 
         JMenuItem[] menuItems = new JMenuItem[3];
 
-        menuItems[0] = new JMenuItem("Rectangle");
+        menuItems[0] = new JMenuItem("CircleStub");
         menuItems[1] = new JMenuItem("Line");
         menuItems[2] = new JMenuItem("Circle");
 
@@ -52,9 +52,9 @@ public final class EditorFrame extends JFrame {
             jMenuItem.addActionListener(e -> {
                 setCursor(new Cursor(Cursor.CROSSHAIR_CURSOR));
                 switch (jMenuItem.getText()){
-                    case "Rectangle":
+                    case "CircleStub":
                         editorControl.setFigurTyp('r');
-                        action.setText("Action: Rectangle");
+                        action.setText("Action: CircleStub");
                         break;
 
                     case "Line":
@@ -122,7 +122,7 @@ public final class EditorFrame extends JFrame {
 
                 switch (e.getKeyChar()){
                     case 'r':
-                        action.setText("Action: Rectangle");
+                        action.setText("Action: CircleStub");
                         break;
 
                     case 'l':

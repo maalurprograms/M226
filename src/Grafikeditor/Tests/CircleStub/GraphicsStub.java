@@ -1,21 +1,19 @@
-package Grafikeditor.Tests.Rectangle;
-
-import java.awt.*;
+package Grafikeditor.Tests.CircleStub;
 
 /**
  * Created by Jonas Cosandey on 20.06.2016.
  */
 public class GraphicsStub extends ConcreteGraphics{
 
-    int numberOfDrawRectCalls = 0;
+    int numberOfDrawCircCalls = 0;
     int x;
     int height;
     int width;
     int y;
 
     @Override
-    public void drawRect(int x, int y, int width, int height) {
-        numberOfDrawRectCalls++;
+    public void drawOval(int x, int y, int width, int height) {
+        numberOfDrawCircCalls++;
         this.x = x;
         this.y = y;
         this.width = width;
